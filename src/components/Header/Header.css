@@ -1,0 +1,94 @@
+:root{
+    --dark-background:#050517;
+    --dark-orange:#cf5c36;
+    --simple-skin-color:#efc88b;
+    --light-skin-color:#f4e3b2;
+    --grey-color:#d3d5d7;
+
+}
+
+.header {
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    color: var(--dark-orange);
+    margin: 0 25px;
+}
+
+.header__logoImage {
+    margin-right: 10px;
+}
+
+.header__logoTitle {
+    text-decoration: none;
+    border: 0;
+    color: white;
+}
+
+.header__search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+    margin: 0 10px;
+}
+
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.header__searchImage{
+    padding: 5px;
+    height: 22px !important;
+    background-color:var(--dark-orange);
+    border-radius: 0 10px 10px 0;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;  
+    color: white;
+    align-items: center;
+}
+
+.nav__itemLineOne {
+    font-size: 10px;
+}
+
+.nav__itemLineTwo {
+    font-size: 13px;
+    font-weight: 800; 
+}
+
+.nav__itemBasket {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.nav__basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
