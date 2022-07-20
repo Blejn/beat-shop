@@ -1,3 +1,20 @@
+
+.checkout__ad {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.checkout__title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkout__left {
+    display: flex;
+    flex-direction: column;
+}
+
 /* .product {
     display: flex;
     flex-direction: column;
@@ -45,17 +62,20 @@
    */
 
 
-.card {
+
+
+.card-checkout{
   position: relative;
   width: 320px;
   height: 480px;
   background: #191919;
+  color: white;
   border-radius: 20px;
   overflow: hidden;
-   flex-direction: column;
+    flex-direction: column;
 }
 
-.card::before {
+.card-checkout::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -65,13 +85,12 @@
   transform: skewY(345deg);
   transition: 0.5s;
 }
-
-.card:hover::before {
+.card-checkout:hover::before {
   top: -50%;
   transform: skewY(370deg);
 }
 
-.card::after {
+.card-checkout::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -80,7 +99,7 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-.card .imgBox {
+.card-checkout .imgBox {
   position: relative;
   width: 100%;
   display: flex;
@@ -90,7 +109,7 @@
   z-index: 1;
 }
 
-.card .contentBox {
+.card-checkout .contentBox {
   position: relative;
   padding: 20px;
   display: flex;
@@ -100,7 +119,7 @@
   z-index: 2;
 }
 
-.card .contentBox h3 {
+.card-checkout.contentBox h3 {
   font-size: 18px;
   color: white;
   font-weight: 500;
@@ -108,19 +127,18 @@
   letter-spacing: 1px;
 }
 
-.card .contentBox .price {
+.card-checkout.contentBox .price {
   font-size: 24px;
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.card .contentBox .product__buy {
+.card-checkout .contentBox .product__buy {
   position: relative;
   top: 100px;
   opacity: 0;
-  border: 0;
-  padding: 5px 20px;
+  padding: 10px 30px;
   /* margin-top: 15px; */
   color: #000000;
   text-decoration: none;
@@ -130,35 +148,10 @@
   letter-spacing: 1px;
   transition: 0.5s;
 }
-.product__play{
-  position: relative;
-  top: 100px;
-  opacity: 0;
 
-  /* margin-top: 15px; */
-  color: white;
-  text-decoration: none;
-  background: transparent;
-  color:#cf5c36;
-  text-transform: uppercase;
-  border: none;
-  transition: 0.5s;
-
-}
-.product__buy:hover{
-  color: white !important;
-
-  
-}
-
-.card:hover .contentBox .product__buy {
+.card-checkout:hover .contentBox .product__buy {
   top: 0;
   opacity: 1;
-}
-.card:hover .contentBox .product__play{
-  top:0;
-  opacity: 1;
-
 }
 
 .photo {
@@ -166,14 +159,17 @@
   width: auto;
   border-radius: 10px;
 }
-  
-  .product__rating {
-    font-size: 10px !important;
-  }
-.icon-play{
-  font-size: 30px;
 
+.checkout_remove{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+     background: #cf5c36;
+     margin: 10px;
+     font-size: 15px;
 }
-.icon-play:hover{
+.checkout_remove:hover{
+  color: white;
+}
 
-}
+

@@ -1,21 +1,42 @@
 import './Product.css';
+import { useStateValue } from '../components/StateProvider/StateProvider';
 import {BsFillPlayFill} from 'react-icons/bs';
-const Product = ({id,title,image,status,price}) =>{
-    let audio=new Audio("../public/music/g_minor_150bpm_southside_type_beat.mp3")
+import {AiFillPlayCircle} from'react-icons/ai';
+const Product = ({id,title,image,status,price,audio}) =>{
+
     const start=()=>{
         audio.play();
     }
+
+    const[state, dispatch]=useStateValue();
+    const addToBasket=()=>{
+        dispatch({
+            type:"ADD_TO_BASKET",
+            item:{
+                id:id,
+                image: image,
+                title: title,
+                price:price,
+                status:status
+            },
+
+         } );
+    };
 return(
-    <div className='product'>
-        <div className='product__info'>
-             <p>
-                {title}
-             </p>  
-           <button className='product_player' onClick={start}></button>
-             <p className='product__price'><strong>{price}<small>$</small></strong></p>
-             <div className='product__rating'>status</div>
-             <img src={image} alt=''></img>
-             <button>Add to Basket</button>
+   
+    <div className='card'>
+        <div className='imgBox'>
+ <img src={image} className="photo"/>
+
+        </div>
+      
+        <div className='contentBox'>
+             <h3> {title} </h3>  
+            <h2 className='price'><strong>{price}</strong><small>$</small></h2>
+           <button className='product__play' onClick={start}><AiFillPlayCircle className='icon-play'/> </button>
+
+             <h3 className='product__rating'>{status}</h3>
+             <button className='product__buy' onClick={addToBasket}>Add to Basket</button>
         </div>
     </div>
 )
