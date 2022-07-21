@@ -44,7 +44,7 @@ return(
                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                 </p>
                <Link to="/register" style={{textDecoration: "none"}} >
-                <button className='login__registerButton'>Create your BeatShop Account</button>
+                <button className='login__registerButton'>Create BeatShop Account</button>
                </Link>
             </div>
             </div>

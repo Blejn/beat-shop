@@ -12,7 +12,40 @@ body {
   min-height: 100vh;
   background: #212121;
 }
-/* RESPONSIVE WEBSITE */
+/* RESPONSIVE WEBSITE HEIGHT */
+
+@media only screen and (max-height: 800px){
+  .register{
+    margin-top:30px !important ;
+  }
+  .register h1{
+    margin: 0!important;
+  }
+  .register form{
+    margin:0 0 !important;
+  }
+.register h5{
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+.register .register__input{
+margin-bottom: 6px;
+}
+.register small{
+  font-size: 10px;
+  
+}
+.register .login__container{
+  padding: 10px !important;
+}
+}
+@media only screen and (max-height: 650px){
+  .text__agree{
+    display: none;
+  }
+}
+/* RESPONSIVE WEBSITE WIDTH */
 
 @media only screen and (max-width: 1080px){
   .header__logoTitle{
@@ -33,6 +66,9 @@ body {
 
 }
 @media only screen and (max-width: 600px){
+
+
+  /*HEADER */
   .nav_your_shop{
     display: none !important;
     
@@ -44,9 +80,14 @@ body {
      margin: 0 6px !important;
      font-size: 10px !important;
   }
+
+
+
 }
 @media only screen and (max-width: 400px){
 
+
+  /*PRODUCT CARD */
    .card{
       width: 250px !important;
   height: 410px !important;
@@ -55,6 +96,9 @@ body {
       max-height: 160px !important;
   width: auto;
   }
+
+
+   /*HEADER */
   .header__logo{
      margin: 0 6px !important;
      font-size: 10px !important;
@@ -65,7 +109,12 @@ body {
   .nav__item{
     margin: 0 5px !important;
   }
-
+/* CHECKOUT PRODUCT */
+.card-checkout{
+    width: 250px !important;
+  height: 410px !important;
+}
+/* LOGIN */
 
 
 

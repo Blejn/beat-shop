@@ -68,28 +68,28 @@ const Register =()=>{
                 <form>
                     <h5>E-mail</h5>
                     <small className={validEmail ? "hide": "valid"}>Something gone wrong</small>
-                    <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
+                    <input className="register__input"  type='text' value={email} onChange={e => setEmail(e.target.value)} />
                    
                     <h5>First Name</h5>
                    
-                    <input type="text" value={firstName} onChange={e=> setFirstName(e.target.value)}/>
+                    <input className="register__input" type="text" value={firstName} onChange={e=> setFirstName(e.target.value)}/>
                     
                     <h5>Last Name</h5>
                    
                    
-                    <input type="text" value={lastName} onChange={e=> setLastName(e.target.value)}/>
+                    <input className="register__input" type="text" value={lastName} onChange={e=> setLastName(e.target.value)}/>
 
                     
                     <h5>Password</h5>
                                 <small className={validPwd ? "hide": "valid"}>Something gone wrong</small>
-                    <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
+                    <input className="register__input" type='password' value={password} onChange={e => setPassword(e.target.value)} />
                      
 
                     <h5>Confirm Password</h5>
                                 <small className={validMatch ? "hide": "valid"}>Something gone wrong</small>
-                    <input type='password' value={matchPassword} onChange={e => setMatchPassword(e.target.value)} />
+                    <input className="register__input" type='password' value={matchPassword} onChange={e => setMatchPassword(e.target.value)} />
                      
-  <p>
+  <p className="text__agree">
                     By signing-in you agree to the eShop Website Conditions of Use & Sale. Please
                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                 </p>
