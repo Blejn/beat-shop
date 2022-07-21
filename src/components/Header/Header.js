@@ -26,7 +26,7 @@ const Header=()=>{
  <span className='nav__itemLineTwo'>Sign in</span>
       </div>
       </Link>
-      <div className='nav__item'>
+      <div className='nav__item  nav_your_shop'>
  <span className='nav__itemLineOne'>Your</span>
  <span className='nav__itemLineTwo'>Shop</span>
       </div>

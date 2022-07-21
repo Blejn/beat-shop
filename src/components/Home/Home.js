@@ -17,10 +17,10 @@ return(
           <div className='home__product'>
            <Product
            id="12345"
-           title="DaBaby tjay type beat "
+           title="DaBaby type beat "
            price={19.99}
            reating={5}
-           status="sold"
+           status="For sale"
           image={DaBabyPhoto}  
           />
           </div>
@@ -30,7 +30,7 @@ return(
            title="Lil tjay type beat "
            price={19.99}
            reating={5}
-           status="sold"
+           status="For sale"
          image={LilTjayPhoto}        
                />
                </div>
@@ -42,7 +42,7 @@ return(
            title="Jack Harlov type beat "
            price={19.99}
            reating={5}
-           status="sold"
+           status="For sale"
           image={JackkHarlowPhoto}          
            />
            </div>
@@ -52,7 +52,7 @@ return(
            title="Lil Tjay type beat "
            price={19.99}
            reating={5}
-           status="sold"
+           status="For sale"
          image={LilTjayPhoto}        
                />
                </div>
@@ -62,7 +62,7 @@ return(
            title="Lil tjay type beat "
            price={19.99}
            reating={5}
-           status="sold"
+           status="For sale"
             image={LilTjayPhoto}        
                />
         </div>

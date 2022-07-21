@@ -1,4 +1,4 @@
-.APP{
+.App{
     height: 100%;
     width: 100%;
 }
@@ -9,9 +9,64 @@
 }
 
 body {
-  display: flex;
- 
-
   min-height: 100vh;
   background: #212121;
+}
+/* RESPONSIVE WEBSITE */
+
+@media only screen and (max-width: 1080px){
+  .header__logoTitle{
+    font-size: 20px;
+  }
+  .home{
+     align-items: center !important;
+    margin-left: auto !important;  
+    margin-right: auto !important;
+  }
+   .home__row{
+    display:inline !important;
+   
+ 
+   }
+    
+
+
+}
+@media only screen and (max-width: 600px){
+  .nav_your_shop{
+    display: none !important;
+    
+  }
+    .nav__item{
+    margin: 0 10px !important;
+  }
+  .header__logo{
+     margin: 0 6px !important;
+     font-size: 10px !important;
+  }
+}
+@media only screen and (max-width: 400px){
+
+   .card{
+      width: 250px !important;
+  height: 410px !important;
+  }
+  .photo{
+      max-height: 160px !important;
+  width: auto;
+  }
+  .header__logo{
+     margin: 0 6px !important;
+     font-size: 10px !important;
+  }
+  .header__logoImage{
+    display: none !important;
+  }
+  .nav__item{
+    margin: 0 5px !important;
+  }
+
+
+
+
 }

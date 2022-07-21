@@ -110,6 +110,7 @@
 
 .card .contentBox .price {
   font-size: 24px;
+  margin:5px 0 ;
   color: white;
   font-weight: 700;
   letter-spacing: 1px;
@@ -121,6 +122,7 @@
   opacity: 0;
   border: 0;
   padding: 5px 20px;
+  margin-top: 0;
   /* margin-top: 15px; */
   color: #000000;
   text-decoration: none;
@@ -132,7 +134,8 @@
 }
 .product__play{
   position: relative;
-  top: 100px;
+   margin-top: -14px;
+     margin:0 0 ;
   opacity: 0;
 
   /* margin-top: 15px; */
@@ -162,13 +165,15 @@
 }
 
 .photo {
-  height: 300px;
+  max-height: 260px;
   width: auto;
   border-radius: 10px;
 }
   
   .product__rating {
-    font-size: 10px !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px !important;
   }
 .icon-play{
   font-size: 30px;

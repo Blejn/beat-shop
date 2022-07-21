@@ -5,7 +5,7 @@ import './Register.css'
 
 const PWD_REGEX=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EMAIL_REGEX= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-const NAME_REGEX=/^(?=.*[a-z])(?=.*[A-Z]) (?=.*[!0-9]) (?=.*[!@#$%]).{1,24}$/
+
 const Register =()=>{
 
 
@@ -42,10 +42,6 @@ const Register =()=>{
      setValidMatch(result)
    },[password,matchPassword])
 
-   useEffect(()=>{
-    setValidFirstName(NAME_REGEX.test(firstName))
-    setValidLastName(NAME_REGEX.test(lastName))
-   },[firstName,lastName])
 
 
     
@@ -75,11 +71,11 @@ const Register =()=>{
                     <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
                    
                     <h5>First Name</h5>
-                    <small className={validFirstName ?"hide": "valid"}>Something gone wrong</small>
+                   
                     <input type="text" value={firstName} onChange={e=> setFirstName(e.target.value)}/>
                     
                     <h5>Last Name</h5>
-                    <small className={validLastName? "hide": "valid"}>Something gone wrong</small>
+                   
                    
                     <input type="text" value={lastName} onChange={e=> setLastName(e.target.value)}/>
 

@@ -12,6 +12,9 @@
 
   
 }
+input{
+    border-radius: 10px;
+}
 .login__page{
     
     align-items: center;
