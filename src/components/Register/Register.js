@@ -14,10 +14,10 @@ const Register =()=>{
     const [validEmail, setValidEmail]=useState(false)
  
     const [firstName,setFirstName]=useState();
-    const [validFirstName, setValidFirstName]=useState(false)
+
 
     const [lastName,setLastName]=useState();
-     const [validLastName, setValidLastName]=useState(false)
+
 
     const [password,setPassword]=useState();
     const[validPwd,setValidPwd]=useState(false);
@@ -45,14 +45,14 @@ const Register =()=>{
 
 
     
-    const history = useNavigate();
+    const navigate = useNavigate();
     const register = e =>{
         e.preventDefault();
         auth
         .createUserWithEmailAndPassword(email,password)
         .then((auth)=>{
-            if( auth&&validEmail===false&&validMatch===false&&validFirstName===false&&validLastName===false ){
-              history.push('/login')
+            if( auth&&validEmail===false&&validMatch===false&& validPwd===false ){
+              navigate('/login')
             }
         })
         .catch(error => alert(error.message))

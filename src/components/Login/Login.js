@@ -3,7 +3,7 @@ import {Link,  useNavigate} from "react-router-dom";
 import { auth } from "../../firebase";
 import'./Login.css'
 const Login = () => {
-    const history = useNavigate();
+    const navigate = useNavigate();
 
         const [email,setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,7 +14,7 @@ const Login = () => {
         auth
             .signInWithEmailAndPassword(email, password)
             .then(auth => {
-                history.push('/');
+                navigate('/');
             })
             .catch(error => alert(error.message))
 

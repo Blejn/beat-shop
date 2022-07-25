@@ -1,15 +1,61 @@
 import React from'react';
 import './Home.css';
-import {AiOutlineSound} from'react-icons/ai'
+import JSONDATA from'./MOCK_DATA.json'
 import Product from '../../Product/Product';
-import DaBabyPhoto from '../assets/images/Da_Baby.jpeg'
+ import DaBabyPhoto from '../assets/images/Da_Baby.jpeg'
 import JackkHarlowPhoto from '../assets/images/Jack_Harlow.jpg'
 import LilTjayPhoto from '../assets/images/Lil_tjay.jpg'
 
-const Home = () => {
+const Home = ({state}) => {
+  const filteredData = JSONDATA.filter((el)=>{
+    if(state ===''){
+       return el;
+     }
+     else{
+       return el.title.toLowerCase().includes(state)
+     }
+   })
 return(
     <div>
- <div className='home'>
+
+<div className='home'>
+<div className='home__row'>
+  <ul>
+    {
+   filteredData.map((val,key,image)=>{
+    switch(val.title){
+      case'DaBaby type beat':
+       image=DaBabyPhoto
+       break;
+     case'Lil tjay type beat':
+     image=LilTjayPhoto
+     break;
+     case 'Jack Harlov type beat':
+      image=JackkHarlowPhoto
+      break;
+      default:
+        console.log("No Beats for sale")
+    }
+   return(
+    <li>
+      <div className='home__product' key={key}>
+     <Product
+           id={val.id}
+           title= {val.title}
+           price={val.price}
+           reating={val.reating}
+           status={val.status}
+          image={image}        
+               />
+      </div> 
+      </li>
+   )
+    } )}
+</ul>
+</div>
+
+
+ {/* <div className='home'>
   
     <div className='home_container'>
       
@@ -91,8 +137,10 @@ return(
       
         </div>
     </div>
- </div>
+ </div> */}
+</div>
     </div>
 )
 }
 export default Home;
+

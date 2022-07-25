@@ -1,11 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
 import './Header.css'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {AiOutlineShop} from 'react-icons/ai';
 import {AiOutlineSearch} from'react-icons/ai';
 import {Link} from 'react-router-dom';
 import { useStateValue } from "../StateProvider/StateProvider";
-const Header=()=>{
+const Header=(props)=>{
+    const{onSearch} = props
+const[searchTerm, setSearchTerm]=useState('')
+
+
+
+let inputHandler =(event)=>{
+    setSearchTerm(event.target.value.toLowerCase());
+}
+
+
+
+const handleEnterKey=(event) =>{
+
+    if(event.key ==='Enter'){
+        onSearch(searchTerm)
+    }
+}
+
     const [{basket},dispatch] = useStateValue()
     return(
         <div className="header">
@@ -16,8 +34,18 @@ const Header=()=>{
     </div>
     </Link>
     <div className='header__search'>
-<input type="text" className="header__searchInput"/>
+<input 
+type="text" 
+className="header__searchInput"
+placeholder="Search..."
+value={searchTerm}
+onKeyPress={handleEnterKey}
+onChange={inputHandler}
+
+/>
+<button className="button__search">
 <AiOutlineSearch className='header__searchImage' fontSize="24"/>
+  </button>
     </div>
     <div className='header__nav'>
         <Link to="/login" style={{textDecoration:"none"}}>

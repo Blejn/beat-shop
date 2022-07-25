@@ -58,8 +58,17 @@ margin-bottom: 6px;
   }
    .home__row{
     display:inline !important;
-   
+   align-items: center !important;
+    margin-left: auto !important;  
+    margin-right: auto !important;
  
+   }
+ 
+   li{
+      display: inline;
+         align-items: center !important;
+    margin-left: auto !important;  
+    margin-right: auto !important;
    }
     
 
