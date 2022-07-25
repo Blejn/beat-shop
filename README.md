@@ -11,7 +11,7 @@ Beat shop is an application where you can hear and buy my productions. The appli
 
 ## Instalation 
 ```bash
-git clone https://github.com/Blejn/weather-world-app.git
+git clone https://github.com/Blejn/beat-shop.git
 npm install
 ```
 
